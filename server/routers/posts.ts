@@ -1,4 +1,3 @@
-import {z} from "zod"
 import { router, procedure} from "../trpc"
 import { PrismaClient } from "@prisma/client"
 
@@ -9,5 +8,6 @@ export const postsRouter = router({
         return {
             posts: await prisma.post.findMany({include:{author: true}})
         }
-    })
+    }),
+
 })

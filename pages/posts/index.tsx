@@ -20,6 +20,7 @@ export default function PostsPage() {
                   height="128"
                 />
                 <h1>{post.author.name}</h1>
+                <p>{post.author.id}</p>
               </div>
 
               <div className="col-span-12 flex-col">
