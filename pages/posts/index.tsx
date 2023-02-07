@@ -1,4 +1,5 @@
 import { trpc } from "@/utils/trpc";
+import Image from "next/image";
 
 export default function PostsPage() {
   const data = trpc.posts.listPosts.useQuery();
@@ -9,13 +10,14 @@ export default function PostsPage() {
           return (
             <div
               key={post.id}
-              className="flex flex-row bg-slate-200 shadow-xl m-6 border-8 border-orange-500"
+              className="flex flex-row bg-base-200 shadow-xl m-6 border-8 border-orange-500"
             >
               <div className="">
-                {/* eslint-disable-next-line @next/next/no-img-element*/}
-                <img
+                <Image
                   src={post.author.image ?? "@/public/favicon"}
                   alt={post.author.name as string}
+                  width="128"
+                  height="128"
                 />
                 <h1>{post.author.name}</h1>
               </div>
