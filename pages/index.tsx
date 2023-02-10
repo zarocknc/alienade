@@ -1,12 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useState, useEffect } from 'react';
-
-import { trpc } from '@/utils/trpc'
 
 export default function Home() {
-  const hello = trpc.hello.useQuery({ text: "cliente" });
-  const ping = trpc.pong.useQuery("luwol")
+
 
 
   return (
@@ -20,10 +16,7 @@ export default function Home() {
       <main >
         <div >
           <h1 className='text-3xl underline'>hola</h1>
-        </div>
-        <div>
-          <p>{hello.data?.greeting}</p>
-          <p>{ping.data?.pongRes}</p>
+          <p>holiwis</p>
         </div>
       </main>
     </>
