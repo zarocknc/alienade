@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Tiptap from '@/components/textEditor/Tiptap'
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
         <div >
           <h1 className='text-3xl underline'>hola</h1>
           <p>holiwis</p>
+          <Tiptap />
         </div>
       </main>
     </>
